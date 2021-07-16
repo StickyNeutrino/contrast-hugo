@@ -2,10 +2,6 @@
 
 {{ $Pages := .Pages }}
 
-{{ if .IsHome }}
-  {{ $Pages = where site.RegularPages "Type" "in" .Site.Params.mainSections }}
-{{ end }}
-
 {{ if .Site.Params.excerpts }}
 
 {{- range $Pages }}
